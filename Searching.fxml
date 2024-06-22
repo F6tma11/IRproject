@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1300.0" style="-fx-background-color: #003C43;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irproject.SearchingController">
+   <children>
+      <TextField fx:id="search_query" layoutX="37.0" layoutY="26.0" prefHeight="58.0" prefWidth="506.0" promptText="Search query" style="-fx-background-color: #e3fef7;" />
+      <Button fx:id="search" layoutX="912.0" layoutY="30.0" mnemonicParsing="false" onAction="#search" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: #77B0AA;" text="Search" textFill="#e3fef7" />
+      <TableView fx:id="doc_table" layoutX="48.0" layoutY="360.0" prefHeight="500.0" prefWidth="1226.0" style="-fx-background-color: #83c5be;">
+        <columns>
+          <TableColumn fx:id="doc_name" prefWidth="375.20002365112305" text="Document name" />
+          <TableColumn fx:id="doc_path" prefWidth="567.1999816894531" text="Document path" />
+        </columns>
+      </TableView>
+      <Button layoutX="48.0" layoutY="887.0" mnemonicParsing="false" onAction="#back_to_intro_page" prefHeight="75.0" prefWidth="390.0" style="-fx-background-color: #77B0AA;" text="Back to Intro Page" textFill="#e3fef7" />
+      <Button layoutX="823.0" layoutY="887.0" mnemonicParsing="false" onAction="#back_to_index_page" prefHeight="75.0" prefWidth="450.0" style="-fx-background-color: #77B0AA;" text="Back to Index page" textFill="#e3fef7" />
+      <CheckBox fx:id="boolean_check" layoutX="39.0" layoutY="166.0" mnemonicParsing="false" text="Boolean Algorithm" textFill="#e3fef7">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="phrase_check" layoutX="37.0" layoutY="202.0" mnemonicParsing="false" text="Pharse Algorithm" textFill="#e3fef7">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="all_check" layoutX="37.0" layoutY="248.0" mnemonicParsing="false" text="All Algorithms" textFill="#e3fef7">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <Button fx:id="clear" layoutX="1095.0" layoutY="30.0" mnemonicParsing="false" onAction="#clearTable" prefHeight="50.0" prefWidth="162.0" style="-fx-background-color: #77B0AA;" text="Clear" textFill="#e3fef7" />
+      <RadioButton fx:id="select_and" layoutX="37.0" layoutY="112.0" mnemonicParsing="false" text="&amp;&amp;" textFill="#e3fef7">
+         <font>
+            <Font size="20.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="select_or" layoutX="125.0" layoutY="112.0" mnemonicParsing="false" text="||" textFill="#e3fef7">
+         <font>
+            <Font size="20.0" />
+         </font></RadioButton>
+      <ComboBox fx:id="search_list" layoutX="566.0" layoutY="26.0" onAction="#select_search" prefHeight="58.0" prefWidth="327.0" promptText="Choose Indexing Type" style="-fx-background-color: #77B0AA;" />
+   </children>
+</AnchorPane>

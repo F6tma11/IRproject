@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1300.0" style="-fx-background-color: #003C43;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irproject.IndexingController">
+   <children>
+      <TextField fx:id="datasetPath" layoutX="65.0" layoutY="32.0" prefHeight="52.0" prefWidth="870.0" promptText="Select your DataSet" style="-fx-background-color: #e3fef7;" />
+      <CheckBox fx:id="Token_process" layoutX="65.0" layoutY="185.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" text="Tokenization" textFill="#e3fef7">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="65.0" layoutY="512.0" mnemonicParsing="false" onAction="#Create_index" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #77B0AA;" text="Create Index" textFill="#e3fef7" />
+      <ComboBox fx:id="index_list" layoutX="977.0" layoutY="32.0" onAction="#select_index" prefHeight="52.0" prefWidth="299.0" promptText="Choose Indexing Type" style="-fx-background-color: #77B0AA;" />
+      <CheckBox fx:id="stopWord_process" layoutX="65.0" layoutY="235.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" text="Stop Words" textFill="#e3fef7">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="lemmetization_process" layoutX="65.0" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" text="Lemmetization" textFill="#e3fef7">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stemming_process" layoutX="65.0" layoutY="335.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" text="Stemming" textFill="#e3fef7">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="normlization_process" layoutX="65.0" layoutY="385.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" text="Normalization" textFill="#e3fef7">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="65.0" layoutY="902.0" mnemonicParsing="false" onAction="#to_intro_page" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #77B0AA;" text="Back" textFill="#e3fef7" />
+      <Label layoutX="65.0" layoutY="135.0" prefHeight="50.0" prefWidth="299.0" text="Select Pre-processsing Techinqe" textFill="#e3fef7">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="995.0" layoutY="892.0" mnemonicParsing="false" onAction="#to_search_page" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #77B0AA;" text="Search" textFill="#e3fef7" />
+   </children>
+</AnchorPane>
